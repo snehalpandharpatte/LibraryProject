@@ -6,7 +6,7 @@ from Book.models import Book
 def homepage(request):
     # all_books = Book.objects.all().filter(is_deleted='N')
     all_books = Book.active_objects.all() #through custom manager
-    # print(all_books)
+    print(all_books)
     return render(request, template_name="home.html", context={"books": all_books})
 
 
