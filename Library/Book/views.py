@@ -38,7 +38,7 @@ def save_book(request):
 
 def edit_book(request, id):
     try:
-        print("ABC")
+        print("ABCDEF")
         book_obj = Book.objects.get(id=id)
     except Book.DoesNotExist:
         msg = f"No book found for id: {id}"
