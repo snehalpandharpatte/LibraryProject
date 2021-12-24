@@ -11,7 +11,7 @@ def homepage(request):
 
 
 def save_book(request):
-    print("In save Book")
+    print("In my save Book")
     print(request.POST)
     b_name = request.POST.get("name")
     b_author = request.POST.get("auth")
