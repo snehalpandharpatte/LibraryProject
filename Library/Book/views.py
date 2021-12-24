@@ -41,7 +41,7 @@ def edit_book(request, id):
         print("Hi")
         book_obj = Book.objects.get(id=id)
     except Book.DoesNotExist:
-        msg = f"No book found for id: {id}"
+        msg = f"No book found for this id: {id}"
         return HttpResponse(msg)
     # all_books = Book.objects.all().filter(is_deleted='N')
     all_books = Book.active_objects.all()
